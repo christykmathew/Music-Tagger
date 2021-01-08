@@ -30,7 +30,7 @@ def music_search(term, API_KEY):
 def music_list(file, mode, api):
   '
   '
-  return tag, Image
+  return music['tracks']['hits'][int(option)]['track']['key']
 ```
  iii. _Meta_Retrieve_ takes three arguments _key_, _file_, _API_KEY_ where key is the key retrieved from  _music_search_, _file_ is the name of the Mp3 file. The available tags will be displayed in output. Some tags might not be available and prompt to enter those tags manually will be given. All the tags in a dictionary and the image file will be returned by this function.
 ```python
