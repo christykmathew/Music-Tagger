@@ -2,9 +2,19 @@
 <!-- ![](https://img.shields.io/github/release/christykmathew/Music-Tagger/editor.md.svg) ![] -->
 # Music-Tagger
 
+<h2> Table of Contents </h2>
+
+[TOC]
+
 <!-- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/christykmathew/Music-Tagger/blob/master/Music_Tagger.ipynb] -->
 ## Introduction
-An Mp3 file tagger for obsessive-compulsive music geeks. Tags like Artist, Album, Genre, Lyrics etc. can be added to your audio metadata and can be automated to certain level. Shazam API is used to fetch the list and meta data of the mp3 file. Synced lyrics that are available is fetched from megalobiz. Mutagen library is used at tha core to edit the meta data.
+An Mp3 file tagger for obsessive-compulsive music geeks. Tags like Artwork, Artist, Album, Genre, Lyrics etc. can be added to your audio metadata and can be automated to certain level. Shazam API is used to fetch the list and meta data of the mp3 file. Synced lyrics that are available is fetched from megalobiz. Mutagen library is used at tha core to edit the meta data.
+
+## Features ##
+- List down probable music titles from the Mp3 filename
+- Get accurate metadata about the music like Artist, Album, Genre, Lyrics, Label, Year, Artwork and save these in the Mp3 file.
+- Get synced Lyrics of the music.
+- User-Friendly interface.
 
 ## TODO ##
   - [ ] Add SYLT ID3v2.4 frame (Synced Lyrics Tag) to Mp3 files.
@@ -18,10 +28,10 @@ API_KEY = "" #Enter you API Key
 Dependencies like _mutagen_, _wget_, _music-tag_ etc. are already installed while running the cells. 
 
 ## Usage ##
-Self-explanatory prompts and outputs are generated while running the python cels. _music_list_, _music_search_, _Meta_Retrieve_,_Tags_Save_, _synced_lyric_ are the main functions that are used in this program. These functions can be used individually as well.  
+Self-explanatory prompts and outputs are generated while running the python cells. _music_list_, _music_search_, _Meta_Retrieve_,_Tags_Save_, _synced_lyric_ are the main functions that are used in this program. These functions can be used individually as well.  
 
 
- i. _music_list_ takes two arguments term and API_KEY where term is the term to be searched. The response from the database in json format is returned
+  1. *music_list*  takes two arguments term and API_KEY where term is the term to be searched. The response from the database in json format is returned
 ```python
 def music_search(term, API_KEY):
   '
@@ -29,8 +39,7 @@ def music_search(term, API_KEY):
   return response
 ```  
 
-
- ii.  _music_search_ takes three arguments _file_, _mode_ and _api_ where _file_ is the mp3 file or the term to be searched and _mode_ that can be either 0(Auto selects probable options) or 1(mannual selection (preferred)) and api is the API_KEY. A list of probable music titles based on the file/term will be displayed and its music key will be returned which will be used by _Meta_Retrieve_.
+2.  _music_search_ takes three arguments _file_, _mode_ and _api_ where _file_ is the mp3 file or the term to be searched and _mode_ that can be either 0(Auto selects probable options) or 1(mannual selection (preferred)) and api is the API_KEY. A list of probable music titles based on the file/term will be displayed and its music key will be returned which will be used by _Meta_Retrieve_.
 ```python
 def music_list(file, mode, api):
   '
@@ -39,7 +48,7 @@ def music_list(file, mode, api):
 ```  
 
 
- iii. _Meta_Retrieve_ takes three arguments _key_, _file_, _API_KEY_ where key is the key retrieved from  _music_search_, _file_ is the name of the Mp3 file. The available tags will be displayed in output. Some tags might not be available and prompt to enter those tags manually will be given. All the tags in a dictionary and the image file will be returned by this function.
+  3.  _Meta_Retrieve_ takes three arguments _key_, _file_, _API_KEY_ where key is the key retrieved from  _music_search_, _file_ is the name of the Mp3 file. The available tags will be displayed in output. Some tags might not be available and prompt to enter those tags manually will be given. All the tags in a dictionary and the image file will be returned by this function.
 ```python
 def Meta_Retrieve(key, file, API_KEY):
  '
@@ -48,13 +57,13 @@ def Meta_Retrieve(key, file, API_KEY):
 ```  
 
 
- iv. _Tags_Save_ takes three argument _Tags_, _Image_, _file_path_ where _Tags_ are the python dictionary cantaining the tags, _Image_ is the artwork/Image file for Mp3 and _file_path_ is the path location of the image file. This function is used to save the meta tags to the Mp3 file and doesn't return anything.
+4.  _Tags_Save_ takes three argument _Tags_, _Image_, _file_path_ where _Tags_ are the python dictionary cantaining the tags, _Image_ is the artwork/Image file for Mp3 and _file_path_ is the path location of the image file. This function is used to save the meta tags to the Mp3 file and doesn't return anything.
  ```python
 def Tags_Save(Tags, Image, file_path):
 ```  
 
 
- v. _synced_lyric_ takes two argument _file_path_ which is the path location of Mp3 and _term_ is the filename/term to be searched for synced lyrics. Synced Lyrics will be saved as _.lrc_ file in Lyrics folder in the _file_path_ specified.
+  5.  _synced_lyric_ takes two argument _file_path_ which is the path location of Mp3 and _term_ is the filename/term to be searched for synced lyrics. Synced Lyrics will be saved as _.lrc_ file in Lyrics folder in the _file_path_ specified.
 ```python
 def synced_lyric(file_path, term):
 ```  
