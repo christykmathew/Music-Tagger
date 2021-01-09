@@ -21,6 +21,7 @@ An Mp3 file tagger for obsessive-compulsive music geeks. Tags like Artwork, Arti
 - User-Friendly interface.
 
 ## TODO
+  - [x] Get Synced Lyrics of the music
   - [ ] Add SYLT ID3v2.4 frame (Synced Lyrics Tag) to Mp3 files.
   - [ ] Stable version for Windows
 
