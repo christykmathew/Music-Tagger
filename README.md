@@ -1,6 +1,4 @@
-<img src="https://img.shields.io/badge/coverage-80%-blue"> <img src="https://img.shields.io/badge/Version-v1.2-green"> <img src="https://img.shields.io/badge/build-unstable-orange">
-
-<!-- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/christykmathew/Music-Tagger/blob/master/Music_Tagger.ipynb] -->
+<img src="https://img.shields.io/badge/Version-v1.2-green"> <img src="https://img.shields.io/badge/build-unstable-orange"> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/christykmathew/Music-Tagger/blob/master/Music_Tagger.ipynb]
 
 # Music-Tagger
 
