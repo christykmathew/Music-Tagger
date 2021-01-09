@@ -15,6 +15,7 @@ API key is required to access Shazam database. Get API Key by signing up in this
 ``` python
 API_KEY = "" #Enter you API Key
 ```
+Dependencies like _mutagen_, _wget_, _music-tag_ etc. are already installed while running the cells. 
 
 ## Usage ##
 Self-explanatory prompts and outputs are generated while running the python cels. _music_list_, _music_search_, _Meta_Retrieve_,_Tags_Save_, _synced_lyric_ are the main functions that are used in this program. These functions can be used individually as well.  
