@@ -25,7 +25,7 @@ def music_search(term, API_KEY):
   '
   '
   return response
-```
+```  
 <br />
  ii.  _music_search_ takes three arguments _file_, _mode_ and _api_ where _file_ is the mp3 file or the term to be searched and _mode_ that can be either 0(Auto selects probable options) or 1(mannual selection (preferred)) and api is the API_KEY. A list of probable music titles based on the file/term will be displayed and its music key will be returned which will be used by _Meta_Retrieve_.
 ```python
@@ -33,7 +33,7 @@ def music_list(file, mode, api):
   '
   '
   return music['tracks']['hits'][int(option)]['track']['key']
-```
+```  
 
 <br />
  iii. _Meta_Retrieve_ takes three arguments _key_, _file_, _API_KEY_ where key is the key retrieved from  _music_search_, _file_ is the name of the Mp3 file. The available tags will be displayed in output. Some tags might not be available and prompt to enter those tags manually will be given. All the tags in a dictionary and the image file will be returned by this function.
@@ -42,16 +42,16 @@ def Meta_Retrieve(key, file, API_KEY):
  '
  '
  return tag, Image
-```
+```  
 
 <br />
  iv. _Tags_Save_ takes three argument _Tags_, _Image_, _file_path_ where _Tags_ are the python dictionary cantaining the tags, _Image_ is the artwork/Image file for Mp3 and _file_path_ is the path location of the image file. This function is used to save the meta tags to the Mp3 file and doesn't return anything.
  ```python
 def Tags_Save(Tags, Image, file_path):
-```
+```  
 
 <br />
  v. _synced_lyric_ takes two argument _file_path_ which is the path location of Mp3 and _term_ is the filename/term to be searched for synced lyrics. Synced Lyrics will be saved as _.lrc_ file in Lyrics folder in the _file_path_ specified.
 ```python
 def synced_lyric(file_path, term):
-```
+```  
