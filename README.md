@@ -2,32 +2,36 @@
 <!-- ![](https://img.shields.io/github/release/christykmathew/Music-Tagger/editor.md.svg) ![] -->
 # Music-Tagger
 
-<h2> Table of Contents </h2>
+## Table of Contents
 
-[TOC]
+* [Introduction](#Introduction)
+* [Features](#Features)
+* [TODO](#TODO)
+* [Dependencies](#Dependencies)
+* [Usage](#Usage)
 
 <!-- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/christykmathew/Music-Tagger/blob/master/Music_Tagger.ipynb] -->
 ## Introduction
 An Mp3 file tagger for obsessive-compulsive music geeks. Tags like Artwork, Artist, Album, Genre, Lyrics etc. can be added to your audio metadata and can be automated to certain level. Shazam API is used to fetch the list and meta data of the mp3 file. Synced lyrics that are available is fetched from megalobiz. Mutagen library is used at tha core to edit the meta data.
 
-## Features ##
+## Features
 - List down probable music titles from the Mp3 filename
 - Get accurate metadata about the music like Artist, Album, Genre, Lyrics, Label, Year, Artwork and save these in the Mp3 file.
 - Get synced Lyrics of the music.
 - User-Friendly interface.
 
-## TODO ##
+## TODO
   - [ ] Add SYLT ID3v2.4 frame (Synced Lyrics Tag) to Mp3 files.
   - [ ] Stable version for Windows
 
-## Dependencies ##
+## Dependencies
 API key is required to access Shazam database. Get API Key by signing up in this <a href='https://rapidapi.com/apidojo/api/shazam?endpoint=apiendpoint_e5620280-234d-409b-a0cf-eb618f1f687d'>link</a> and paste it in the API_KEY variable
 ``` python
 API_KEY = "" #Enter you API Key
 ```
 Dependencies like _mutagen_, _wget_, _music-tag_ etc. are already installed while running the cells. 
 
-## Usage ##
+## Usage
 Self-explanatory prompts and outputs are generated while running the python cells. _music_list_, _music_search_, _Meta_Retrieve_,_Tags_Save_, _synced_lyric_ are the main functions that are used in this program. These functions can be used individually as well.  
 
 
